@@ -1,0 +1,81 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    color: white;
+}
+
+.container > div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.title{
+    align-items: center;
+    color: rgb(113 113 122);
+    font-size: 1.3rem;
+    font-family: emoji;
+}
+
+.title > p {
+    font-weight: inherit;
+    font-size: inherit;
+    color: gray;
+}
+
+.perfil{
+    justify-content: space-around;
+} 
+.perfil > div{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    justify-content: center;
+}
+
+.desc > h1{
+    font-weight: 900;
+    font-size: 7rem;
+    font-family: auto;
+    text-shadow: 10px 5px 15px rgb(139 132 132 / 30%);
+}
+
+.changingText{
+    color: rgb(113 113 122);
+    font-size: 2.5rem;
+    font-family: monospace;
+}
+
+.cursor{
+    margin-top: 13px;
+    margin-left: 5px;
+    font-size: 1.5rem;
+}
+
+.guion{
+    color: rgb(24 24 27);
+    font-size: 2.5rem;
+    font-family: monospace;
+}
+
+.links{
+    display: flex;
+    justify-content: end;
+    font-size: 2.5rem;
+}
+
+.links > div > a{
+    transition: all .3s ease-out;
+}
+
+.links > div > a:hover{
+    transform: scale(1.3);
+    color: rgb(0 222 255);
+}
+
+.image{
+    /* box-shadow: 8px 8px 8px red; */
+    filter: drop-shadow(7px 4px 12px rgb(189, 187, 187));
+}

@@ -1,0 +1,116 @@
+.section{
+    width: 100%;
+    display: flex;
+    /* border-bottom: 1px solid gray; */
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+
+.projectsContainer{
+    display: flex;
+    flex-direction: column;
+    min-width: 450px;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.cardContainer{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 250px;
+    border: solid 3px rgb(78, 78, 78);
+    border-radius: 5px;
+    transition: all .3s ease-out;
+    box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.68);
+-webkit-box-shadow: 0px 0px 21px 1px  rgb(142 137 137 / 68%);
+-moz-box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.68);
+}
+
+.cardImg{
+    width: 450px;
+    height: 100%;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    transition: all .3s ease-out;
+}
+
+.cardDescription{
+    display: flex;
+    height: 100%;
+    width: 450px;
+    text-align: start;
+    justify-content: center;
+    padding: 25px;
+    font-family: system-ui;
+    background-image: linear-gradient(to right top,#000,#040404,#090909,#0d0d0d,#101010,#121212,#141414,#161616,#171717,#191919,#1a1a1a,#1b1b1b);
+}
+
+.cardContainer:hover{
+    transform: scale(1.04);
+    border-top-color: rgb(147 197 253);
+    border-right-color: rgb(37 99 235);
+    border-bottom-color: rgb(147 51 234);
+    border-left-color: rgb(216 180 254);
+}
+
+.cardContainer:hover .cardImg{
+    opacity: .8;
+    filter: blur(1.5px);
+}
+.detail{
+    position: absolute;
+    bottom: 10px;
+    font-size: .8rem;
+}
+
+.cardContainer > button{
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 10px 30px;
+    border-radius: 5px;
+    display: none;
+    filter: blur(0px);
+    bottom: 40%;
+    left: 170px;
+    transition: all .3s ease-out;
+}
+
+.cardContainer:hover > button{
+    display: block;
+}
+
+.cardContainer > button:hover{
+    background-color: black;
+    color:white;
+    transform: scale(1.05);
+}
+
+.titleContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    /* gap: 20px; */
+    width: 75%;
+    border-bottom: solid 2px rgb(87, 85, 85);
+    padding-bottom: 20px;
+}
+
+.titleContainer > h1{
+    font-size: 4rem;
+    font-family: auto;
+}
+
+.titleContainer > span{
+    font-family: inherit;
+    font-size: 1.2rem;
+    color: rgb(87, 85, 85);
+}
