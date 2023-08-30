@@ -4,6 +4,15 @@ import {GrMail} from "react-icons/gr"
 import style from "./Links.module.css"
 
 export const Links = () => {
+
+    const handleEnviarCorreo = () => {
+        const destinatario = 'marinichenzo@gmail.com';
+        const asunto = 'Asunto del correo';
+        const mailtoURL = `mailto:${destinatario}?subject=${encodeURIComponent(asunto)}`;
+    
+        window.location.href = mailtoURL;
+      }
+
     const obj = [
         {
             icon : FaLinkedin,
@@ -21,10 +30,11 @@ export const Links = () => {
   return (
     <div className={style.container}>
         {obj.map(e=>{
-            return (<a target="_blank" href={e.link} key={e.link}>
+            return (<a target="_blank" href={e.link == "link" ? null :e.link} key={e.link} onClick={e.link == "link"? handleEnviarCorreo :null}>
                 <e.icon/>
             </a>)
         })}
+        <a href="../../../public/CV.docx" download>cv</a>
     </div>
   )
 }

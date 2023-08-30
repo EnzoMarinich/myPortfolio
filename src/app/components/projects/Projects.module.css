@@ -105,12 +105,12 @@
 }
 
 .titleContainer > h1{
-    font-size: 4rem;
+    font-size: 3.6rem;
     font-family: auto;
 }
 
 .titleContainer > span{
     font-family: inherit;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: rgb(87, 85, 85);
 }
