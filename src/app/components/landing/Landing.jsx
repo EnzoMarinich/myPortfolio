@@ -4,6 +4,7 @@ import style from "./Landing.module.css";
 import Image from "next/image";
 import foto from "../../../../public/fotoPerfil-sinfondo-preview.png";
 import { Links } from "../Links";
+import logo1 from "../../../../public/logo1.png"
 
 export const Landing = () => {
 

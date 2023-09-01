@@ -44,7 +44,7 @@
 
 .changingText{
     color: rgb(113 113 122);
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-family: monospace;
 }
 
@@ -63,7 +63,7 @@
 .links{
     display: flex;
     justify-content: end;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .links > div > a{
@@ -75,7 +75,6 @@
     color: rgb(0 222 255);
 }
 
-.image{
-    /* box-shadow: 8px 8px 8px red; */
+/* .image{
     filter: drop-shadow(7px 4px 12px rgb(189, 187, 187));
-}
+} */

@@ -14,6 +14,8 @@ import node from "../../../../public/node.svg";
 import mySql from "../../../../public/mySql.svg";
 import postgre from "../../../../public/postgreSQL.svg";
 import sequelize from "../../../../public/sequelize.svg";
+import sass from "../../../../public/sass.svg";
+
 
 
 
@@ -29,6 +31,7 @@ export const Stack = () => {
     { icon: redux.src, name: "Redux", link: "https://redux.js.org/" },
     { icon: boostrap.src, name: "Bootstrap", link: "https://getbootstrap.com/" },
     { icon: tailwind.src, name: "Tailwind CSS", link: "https://tailwindui.com/" },
+    { icon: sass.src, name: "Sass", link: "https://sass-lang.com/" },
     { icon: node.src, name: "Node.js", link: "linhttps://nodejs.org/esk" },
     { icon: mySql.src, name: "MySQL", link: "https://www.mysql.com/" },
     { icon: postgre.src, name: "PostgreSQL", link: "https://www.postgresql.org/" },

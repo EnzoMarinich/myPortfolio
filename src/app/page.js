@@ -6,6 +6,7 @@ import Projects from "./components/projects/Projects"
 import { Navbar } from "./components/navbar/Navbar"
 import { Contact } from "./components/contact/Contact"
 import { Stack } from "./components/stack/Stack"
+import { Footer } from "./components/footer/Footer"
 
 export default function Home() {
   
@@ -16,7 +17,8 @@ export default function Home() {
       <About/>
       <Projects/>
       <Stack/>
-      <Contact/>
+      {/* <Contact/> */}
+      <Footer/>
     </main>
   )
 }

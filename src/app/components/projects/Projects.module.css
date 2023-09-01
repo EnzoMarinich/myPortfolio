@@ -44,12 +44,13 @@
 
 .cardDescription{
     display: flex;
+    flex-direction: column;
     height: 100%;
     width: 450px;
     text-align: start;
-    justify-content: center;
     padding: 25px;
     font-family: system-ui;
+    gap: 15px;
     background-image: linear-gradient(to right top,#000,#040404,#090909,#0d0d0d,#101010,#121212,#141414,#161616,#171717,#191919,#1a1a1a,#1b1b1b);
 }
 

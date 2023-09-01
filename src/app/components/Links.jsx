@@ -1,6 +1,8 @@
 import React from 'react'
 import {FaLinkedin, FaGithub} from "react-icons/fa"
 import {GrMail} from "react-icons/gr"
+import {AiFillFileText} from "react-icons/ai"
+import {BsWhatsapp} from "react-icons/bs"
 import style from "./Links.module.css"
 
 export const Links = () => {
@@ -25,6 +27,10 @@ export const Links = () => {
         {
             icon : GrMail,
             link : "link"
+        },
+        {
+            icon : BsWhatsapp,
+            link : "https://api.whatsapp.com/send?phone=543644621785"
         }
     ]
   return (
@@ -34,7 +40,7 @@ export const Links = () => {
                 <e.icon/>
             </a>)
         })}
-        <a href="../../../public/CV.docx" download>cv</a>
+        <a href="/CV.docx" download><AiFillFileText/></a>
     </div>
   )
 }

@@ -32,3 +32,10 @@
     font-size: 1rem;
     color: rgb(87, 85, 85);
 }
+
+.aboutMe{
+    display: flex;
+    width: 75%;
+    color: #fff;
+    margin-top: 50px;
+}
