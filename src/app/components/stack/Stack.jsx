@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import style from "./Stack.module.css";
 import html5 from "../../../../public/html5-original.svg";
 import next from "../../../../public/next.svg";
@@ -15,6 +15,7 @@ import mySql from "../../../../public/mySql.svg";
 import postgre from "../../../../public/postgreSQL.svg";
 import sequelize from "../../../../public/sequelize.svg";
 import sass from "../../../../public/sass.svg";
+import { themeDarkContext } from "@/app/useContext/theme";
 
 
 
@@ -22,6 +23,9 @@ import sass from "../../../../public/sass.svg";
 
 
 export const Stack = () => {
+
+  const {themeDark} = useContext(themeDarkContext)
+
   const stack = [
     { icon: html5.src, name: "HTML", link: "https://lenguajehtml.com/html/" },
     { icon: css.src, name: "CSS", link: "https://lenguajecss.com/css/introduccion/que-es-css/" },
@@ -42,7 +46,7 @@ export const Stack = () => {
   return (
     <section id="stack" className={style.container}>
       <div className={style.title}>
-        <h1>Technology Stack</h1>
+        <h1 style={themeDark? {} : {color:"rgb(14, 149, 169)"}}>Technology Stack</h1>
         <span>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates,
           repudiandae.
@@ -51,7 +55,7 @@ export const Stack = () => {
       <div className={style.cardContainer}>
         {stack.map((stack) => {
           return (
-            <a target="_blank" href={stack.link} key={stack.name} className={style.card}>
+            <a target="_blank" href={stack.link} key={stack.name} className={` ${style.card} ${themeDark? style.dark : style.clear}`}>
               <div className={style.cardDiv}>
                 <img className={style.cardImg} src={stack.icon} alt="" />
                 <span>{stack.name}</span>

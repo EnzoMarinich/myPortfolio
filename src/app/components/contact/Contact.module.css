@@ -1,6 +1,115 @@
-.container{
+.section{
+    margin-top: 180px;
     width: 100%;
-    height: 500px;
     display: flex;
-    border-bottom: 1px solid gray;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 75%;
+    color: white;
+}
+
+.titleContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    border-bottom: solid 2px rgb(87, 85, 85);
+    padding-bottom: 20px;
+}
+
+.titleContainer > h1{
+    font-size: 3.6rem;
+    font-family: auto;
+}
+
+.titleContainer > span{
+    font-family: inherit;
+    font-size: 1rem;
+    color: rgb(87, 85, 85);
+}
+
+.formContainer{
+    margin-top: 60px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.form{
+    width: 50%;
+    border: solid 1px white;
+    border-radius: 10px;
+}
+
+.form > form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 3rem;
+}
+
+.title{
+    display: flex;
+    position: relative;
+    width: 50%;
+    border: solid red 1px;
+}
+
+.form > form > div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.form > form > div > input{
+    width: 100%;
+    height: 2rem;
+    border-radius: 5px;
+    color: black;
+    padding-left: 1rem;
+}
+
+.enviar{
+    margin-top: 2rem;
+    transition: all .3s ease-out;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+
+
+.titleClear{
+    color: rgb(14, 149, 169)
+}
+
+.formClear{
+    background-color: rgb(0 222 255);
+    color: black;
+}
+
+.enviarDark{
+    border: solid 1px white;
+}
+
+.enviarDark:hover{
+    background-color: white;
+    color: black;
+}
+
+.enviarClear{
+    border: solid 1px black;
+}
+
+.enviarClear:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(0 222 255);
 }

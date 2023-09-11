@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import style from "./About.module.css";
 import WorkItem from "./WorkItem";
+import { themeDarkContext } from "@/app/useContext/theme";
 
 export const About = () => {
+
+  const {themeDark} = useContext(themeDarkContext)
+
+
   const data = [
     {
       year: "feb-2023",
@@ -38,15 +43,19 @@ export const About = () => {
     <section id="about" className={style.section}>
       <div className={style.container}>
         <div className={style.titleContainer}>
-          <h1>About Me</h1>
-          <span>Here I will tell you a little about my path to being a Full Stack Developer.</span>
+          <h1 style={themeDark? {} : {color: "rgb(14 149 169)"}}>About Me</h1>
+          <span>
+            Here I will tell you a little about my path to being a Full Stack
+            Developer.
+          </span>
         </div>
-        <span className={style.aboutMe}>I started the career of Public Accountant in the year 2020 until I found my passion for programming in the year 2022, and since then I have focused only on this incredible world.
-Here I will tell you my trajectory...</span>
-        <div
-          id="work"
-          className="max-w-[50%] m-auto p-4 py-16 select-none"
-        >
+        <span style={themeDark? {} : {color: "rgb(14 149 169)"}} className={style.aboutMe} >
+          I started the career of Public Accountant in the year 2020 until I
+          found my passion for programming in the year 2022, and since then I
+          have focused only on this incredible world. Here I will tell you my
+          trajectory...
+        </span>
+        <div id="work" className="max-w-[50%] m-auto p-4 py-16 select-none">
           {/* <h1 className="text-4xl font-bold text-center text-[#001b5e]">Work Experience</h1> */}
           {data.map((item, idx) => (
             <WorkItem

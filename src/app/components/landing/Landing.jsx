@@ -1,12 +1,13 @@
 "use client"
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import style from "./Landing.module.css";
 import Image from "next/image";
 import foto from "../../../../public/fotoPerfil-sinfondo-preview.png";
 import { Links } from "../Links";
-import logo1 from "../../../../public/logo1.png"
+import { themeDarkContext } from "@/app/useContext/theme";
 
 export const Landing = () => {
+  const {themeDark} = useContext(themeDarkContext)
 
   const texts = [
     "Full Stack Developer",
@@ -24,6 +25,7 @@ export const Landing = () => {
     const currentText = texts[index];
     const container = document.querySelector("#textChanging");
     const currentTextLength = currentText.length;
+
   
     if (isDeleting) {
       container.textContent = currentText.substring(0, charIndex - 1);
@@ -46,7 +48,6 @@ export const Landing = () => {
     setTimeout(changeText, speed);
   };
   
-
   useEffect(() => {
     changeText();
   }, []);
@@ -55,19 +56,19 @@ export const Landing = () => {
   return (
     <section id="landing" className={style.container}>
       <div className={style.title}>
-        <span style={{marginTop:"10px"}}>
+        <span style={{marginTop: "10px"}}>
           Chaco | Argentina
         </span>
       </div>
       <div className={style.perfil}>
         <div className={style.desc}>
-          <h1>Enzo Marinich</h1>
-          <div style={{display:"flex", marginTop:"-25px"}}>
-            <span className={style.guion}>-</span>
-            <span className={style.changingText} id="textChanging"></span>
+          <h1 style={themeDark? {} : {color: "black"}}>Enzo Marinich</h1>
+          <div style={{display: "flex", marginTop: "-25px"}}>
+            <span className={style.guion} style={themeDark? {color: "rgb(14 14 16)"} : {color: "white"}}>-</span>
+            <span className={style.changingText} style={themeDark? {color: "rgb(113 113 122)"} : {color: "rgb(0 222 255)"}} id="textChanging"></span>
             <span className={style.cursor} id="cursor">|</span>
           </div>
-          <div className={style.links}>
+          <div className={style.links} style={themeDark? {} : {color: "black"}}>
             <Links/>
           </div>
         </div>
