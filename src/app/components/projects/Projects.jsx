@@ -49,7 +49,7 @@ const Projects = () => {
         <div className={style.projectsContainer} >
             {projects.map(e=>{
               return (
-                <a target="_blank" href={e.href}>
+                <a key={e.href} target="_blank" href={e.href}>
                   <div className={style.cardContainer}>
                     <div className={style.cardImg} style={{backgroundImage: `url(${e.img}?`}}>
                     </div>
