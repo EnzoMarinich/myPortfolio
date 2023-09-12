@@ -3,6 +3,7 @@ import style from "./Footer.module.css"
 import { Links } from '../Links'
 import logo1 from "../../../../public/logo1.png"
 import { themeDarkContext } from '@/app/useContext/theme'
+import Image from 'next/image'
 
 export const Footer = () => {
 
@@ -15,7 +16,7 @@ export const Footer = () => {
            <Links/>
         </div>
         <span className={style.span}>Created by Enzo Marinich - All rights reserved -  2023 © CopyRight</span>
-        <img className={style.img} src={logo1.src} alt="" />
+        <Image className={style.img} src={logo1.src} width={500} height={500}/>
     </footer>
   )
 }

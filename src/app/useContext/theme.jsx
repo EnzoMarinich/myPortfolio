@@ -1,4 +1,5 @@
-const { createContext, useContext, useState } = require("react");
+"use client"
+import { createContext, useContext, useState }  from "react";
 
 
 export const themeDarkContext = createContext()

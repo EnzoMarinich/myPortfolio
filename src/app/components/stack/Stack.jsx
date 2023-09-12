@@ -16,6 +16,7 @@ import postgre from "../../../../public/postgreSQL.svg";
 import sequelize from "../../../../public/sequelize.svg";
 import sass from "../../../../public/sass.svg";
 import { themeDarkContext } from "@/app/useContext/theme";
+import Image from "next/image";
 
 
 
@@ -57,7 +58,7 @@ export const Stack = () => {
           return (
             <a target="_blank" href={stack.link} key={stack.name} className={` ${style.card} ${themeDark? style.dark : style.clear}`}>
               <div className={style.cardDiv}>
-                <img className={style.cardImg} src={stack.icon} alt="" />
+                <Image className={style.cardImg} src={stack.icon} width={500} height={500} alt="" />
                 <span>{stack.name}</span>
               </div>
             </a>
