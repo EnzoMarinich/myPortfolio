@@ -27,6 +27,8 @@
 
 .perfil{
     justify-content: space-around;
+    display: flex;
+    gap: 100px;
 } 
 .perfil > div{
     display: flex;
@@ -74,6 +76,8 @@
     color: rgb(0 222 255);
 }
 
-/* .image{
-    filter: drop-shadow(7px 4px 12px rgb(189, 187, 187));
-} */
+.image{
+    display: flex;
+    padding-top: 94px;
+    /* filter: drop-shadow(7px 4px 12px rgb(189, 187, 187)); */
+}
